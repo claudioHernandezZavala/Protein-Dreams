@@ -8,6 +8,9 @@ import {
 /* =========================================================================
    MENU CONFIGURATION (JSON DATA)
    Edit this section to change menu items, prices, descriptions, or images.
+   
+   NOTE: Since your Vite config has base: '/Protein-Dreams/', 
+   public directory images must be prefixed with that path.
    ========================================================================= */
 const MENU_ITEMS = [
   // --- SHAKES ---
@@ -18,7 +21,7 @@ const MENU_ITEMS = [
     protein: '24g Protein',
     price: '$13.50',
     desc: 'Rich chocolate blended with refreshing mint. A classic favorite.',
-    image: '/drink-left.png',
+    image: '/Protein-Dreams/drink-left.png',
     accent: '#00C4CC'
   },
   {
@@ -28,7 +31,7 @@ const MENU_ITEMS = [
     protein: '24g Protein',
     price: '$14.00',
     desc: 'Cookies and cream goodness without the guilt. Crunchy & smooth.',
-    image: '/drink-right.png',
+    image: '/Protein-Dreams/drink-right.png',
     accent: '#00C4CC'
   },
   {
@@ -38,7 +41,7 @@ const MENU_ITEMS = [
     protein: '24g Protein',
     price: '$13.00',
     desc: 'Toasted marshmallow flavor with chocolate notes. Campfire vibes.',
-    image: '/drink-left.png',
+    image: '/Protein-Dreams/drink-left.png',
     accent: '#00C4CC'
   },
   {
@@ -48,7 +51,7 @@ const MENU_ITEMS = [
     protein: '24g Protein',
     price: '$15.00',
     desc: 'Nutty, creamy, and sophisticated. A unique protein experience.',
-    image: '/drink-right.png',
+    image: '/Protein-Dreams/drink-right.png',
     accent: '#00C4CC'
   },
   {
@@ -58,7 +61,7 @@ const MENU_ITEMS = [
     protein: '24g Protein',
     price: '$14.50',
     desc: 'Fruity sweetness with a creamy finish. Tastes like dessert.',
-    image: '/drink-left.png',
+    image: '/Protein-Dreams/drink-left.png',
     accent: '#00C4CC'
   },
   {
@@ -68,7 +71,7 @@ const MENU_ITEMS = [
     protein: '24g Protein',
     price: '$14.00',
     desc: 'Banana, peanut butter, and chocolate. The ultimate power trio.',
-    image: '/drink-right.png',
+    image: '/Protein-Dreams/drink-right.png',
     accent: '#00C4CC'
   },
 
@@ -452,12 +455,13 @@ const HomeView = ({ onNavigateToMenu }) => {
         <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black/60"></div>
         
         {/* Animated Background Elements */}
-        <img src="/drink-left.png" alt="Protein Shake" className="hero-image falling-left hidden md:block" style={{ left: '5%', top: '20%', width: '280px', height: 'auto', transform: 'rotate(-15deg)', maxWidth: '25vw' }} onError={(e) => { e.target.style.display = 'none'; }} />
-        <img src="/drink-right.png" alt="Chocolate Protein Shake" className="hero-image falling-right hidden md:block" style={{ right: '5%', top: '25%', width: '280px', height: 'auto', transform: 'rotate(15deg)', maxWidth: '25vw' }} onError={(e) => { e.target.style.display = 'none'; }} />
+        {/* UPDATED SRC for GitHub Pages base path */}
+        <img src="/Protein-Dreams/drink-left.png" alt="Protein Shake" className="hero-image falling-left hidden md:block" style={{ left: '5%', top: '20%', width: '280px', height: 'auto', transform: 'rotate(-15deg)', maxWidth: '25vw' }} onError={(e) => { e.target.style.display = 'none'; }} />
+        <img src="/Protein-Dreams/drink-right.png" alt="Chocolate Protein Shake" className="hero-image falling-right hidden md:block" style={{ right: '5%', top: '25%', width: '280px', height: 'auto', transform: 'rotate(15deg)', maxWidth: '25vw' }} onError={(e) => { e.target.style.display = 'none'; }} />
 
         {/* Mobile Background Elements */}
-        <img src="/drink-left.png" alt="Protein Shake" className="hero-image falling-left md:hidden" style={{ left: '-10%', top: '15%', width: '200px', height: 'auto', transform: 'rotate(-15deg)', opacity: 0.2 }} onError={(e) => { e.target.style.display = 'none'; }} />
-        <img src="/drink-right.png" alt="Chocolate Protein Shake" className="hero-image falling-right md:hidden" style={{ right: '-10%', top: '20%', width: '200px', height: 'auto', transform: 'rotate(15deg)', opacity: 0.2 }} onError={(e) => { e.target.style.display = 'none'; }} />
+        <img src="/Protein-Dreams/drink-left.png" alt="Protein Shake" className="hero-image falling-left md:hidden" style={{ left: '-10%', top: '15%', width: '200px', height: 'auto', transform: 'rotate(-15deg)', opacity: 0.2 }} onError={(e) => { e.target.style.display = 'none'; }} />
+        <img src="/Protein-Dreams/drink-right.png" alt="Chocolate Protein Shake" className="hero-image falling-right md:hidden" style={{ right: '-10%', top: '20%', width: '200px', height: 'auto', transform: 'rotate(15deg)', opacity: 0.2 }} onError={(e) => { e.target.style.display = 'none'; }} />
         
         <div className="relative z-10 max-w-4xl mx-auto">
           <p className="text-[#00C4CC] font-medium tracking-[0.2em] mb-4 animate-pulse">EST. BROOKLYN, NY</p>
@@ -511,7 +515,7 @@ const HomeView = ({ onNavigateToMenu }) => {
             <div className="relative">
               <div className="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-[#00C4CC] rounded-tl-3xl"></div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 border-b-4 border-r-4 border-[#C5A059] rounded-br-3xl"></div>
-              <img src="/protein waffles.jpg" alt="Healthy Shake" className="rounded-xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-700 w-full object-cover h-[500px]" />
+              <img src="/Protein-Dreams/protein waffles.jpg" />
             </div>
             
             <div>
